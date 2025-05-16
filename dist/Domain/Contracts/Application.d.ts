@@ -1,0 +1,37 @@
+import { BindingIdentifier, BindToFluentSyntax, GetOptions, OptionalGetOptions, ServiceIdentifier } from "inversify";
+import { ServiceProvider } from "support.ts";
+export interface Application {
+    bind<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T>;
+    get<T>(serviceIdentifier: ServiceIdentifier<T>, options: OptionalGetOptions): T | undefined;
+    get<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): T;
+    getAll<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): T[];
+    getAllAsync<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): Promise<T[]>;
+    getAsync<T>(serviceIdentifier: ServiceIdentifier<T>, options: OptionalGetOptions): Promise<T | undefined>;
+    getAsync<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): Promise<T>;
+    rebind<T>(serviceIdentifier: ServiceIdentifier<T>): Promise<BindToFluentSyntax<T>>;
+    rebindSync<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T>;
+    unbind(identifier: BindingIdentifier | ServiceIdentifier): Promise<void>;
+    unbindAll(): Promise<void>;
+    unbindSync(identifier: BindingIdentifier | ServiceIdentifier): void;
+    basePath(): string;
+    configPath(): string;
+    databasePath(): string;
+    resourcesPath(): string;
+    storagePath(): string;
+    langPath(): string;
+    publicPath(): string;
+    environment(): string;
+    isLocal(): boolean;
+    isProduction(): boolean;
+    isTesting(): boolean;
+    runningInConsole(): boolean;
+    hasDebugModeEnabled(): boolean;
+    register(provider: ServiceProvider): void;
+    boot(): Promise<void>;
+    resolveProvider<T>(provider: ServiceProvider): T;
+    getLocale(): string;
+    setLocale(locale: string): void;
+    terminate(): Promise<void>;
+    terminating(callback: () => Promise<void> | void): void;
+    booting(callback: () => Promise<void> | void): void;
+}
