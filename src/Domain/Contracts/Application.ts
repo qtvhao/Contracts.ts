@@ -1,37 +1,75 @@
 // src/Domain/Contracts/Application.ts
 
-import { Container } from "inversify";
-import { ServiceProvider } from "support.ts"
+import {
+    BindingIdentifier,
+    BindToFluentSyntax,
+    GetOptions,
+    OptionalGetOptions,
+    ServiceIdentifier,
+} from "inversify";
+import { ServiceProvider } from "support.ts";
 
-export interface Application extends Container {
-  // Path accessors
-  basePath(): string;
-  configPath(): string;
-  databasePath(): string;
-  resourcesPath(): string;
-  storagePath(): string;
-  langPath(): string;
-  publicPath(): string;
+export interface Application {
+    bind<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T>;
+    get<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options: OptionalGetOptions,
+    ): T | undefined;
+    get<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): T;
+    getAll<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions,
+    ): T[];
+    getAllAsync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions,
+    ): Promise<T[]>;
+    getAsync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options: OptionalGetOptions,
+    ): Promise<T | undefined>;
+    getAsync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions,
+    ): Promise<T>;
+    rebind<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+    ): Promise<BindToFluentSyntax<T>>;
+    rebindSync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+    ): BindToFluentSyntax<T>;
+    unbind(identifier: BindingIdentifier | ServiceIdentifier): Promise<void>;
+    unbindAll(): Promise<void>;
+    unbindSync(identifier: BindingIdentifier | ServiceIdentifier): void;
 
-  // Environment detection
-  environment(): string;
-  isLocal(): boolean;
-  isProduction(): boolean;
-  isTesting(): boolean;
-  runningInConsole(): boolean;
-  hasDebugModeEnabled(): boolean;
+    // Path accessors
+    basePath(): string;
+    configPath(): string;
+    databasePath(): string;
+    resourcesPath(): string;
+    storagePath(): string;
+    langPath(): string;
+    publicPath(): string;
 
-  // Service Provider lifecycle
-  register(provider: ServiceProvider): void;
-  boot(): Promise<void>;
-  resolveProvider<T>(provider: ServiceProvider): T;
+    // Environment detection
+    environment(): string;
+    isLocal(): boolean;
+    isProduction(): boolean;
+    isTesting(): boolean;
+    runningInConsole(): boolean;
+    hasDebugModeEnabled(): boolean;
 
-  // Localization
-  getLocale(): string;
-  setLocale(locale: string): void;
+    // Service Provider lifecycle
+    register(provider: ServiceProvider): void;
+    boot(): Promise<void>;
+    resolveProvider<T>(provider: ServiceProvider): T;
 
-  // Lifecycle control
-  terminate(): Promise<void>;
-  terminating(callback: () => Promise<void> | void): void;
-  booting(callback: () => Promise<void> | void): void;
+    // Localization
+    getLocale(): string;
+    setLocale(locale: string): void;
+
+    // Lifecycle control
+    terminate(): Promise<void>;
+    terminating(callback: () => Promise<void> | void): void;
+    booting(callback: () => Promise<void> | void): void;
 }
