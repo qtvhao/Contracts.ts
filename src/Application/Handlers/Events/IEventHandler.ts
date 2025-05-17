@@ -10,7 +10,7 @@ export interface IEventHandler<T extends IDomainEvent = IDomainEvent> {
   handle(event: T): Promise<void>;
 
   /**
-   * Returns the event class this handler is responsible for.
+   * Returns the event classes this handler is responsible for.
    */
-  supports(): new (...args: any[]) => T;
+  supports(): Array<new (...args: any[]) => T>;
 }
