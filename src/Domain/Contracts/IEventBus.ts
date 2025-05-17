@@ -2,6 +2,6 @@ import { IEventHandler } from "../../Application/Handlers/Events/IEventHandler";
 import { IDomainEvent } from "./IDomainEvent";
 
 export interface IEventBus {
-  publish(event: IDomainEvent): void;
+  publish(events: IDomainEvent[]): Promise<void>;
   subscribe<T extends IDomainEvent>(eventName: string, handler: IEventHandler<T>): void;
 }
