@@ -4,12 +4,16 @@ import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
 import { IEventBus } from "./Domain/Contracts/IEventBus";
 import { EventConstructor } from "./Domain/Contracts/IEventBus";
+import { IConsumer } from "./Domain/Contracts/Messaging/IConsumer";
+import { IProducer } from "./Domain/Contracts/Messaging/IProducer";
 
 export {
     Application,
     EventConstructor,
+    IConsumer,
     IDomainEvent,
     IEventBus,
     IEventHandler,
+    IProducer,
     IServiceProvider,
 };
