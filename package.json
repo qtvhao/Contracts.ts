@@ -20,7 +20,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "inversify": "^7.5.1",
-    "support.ts": "github:qtvhao/Support.ts"
+    "inversify": "^7.5.1"
   }
 }

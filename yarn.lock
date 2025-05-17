@@ -59,7 +59,6 @@ __metadata:
   resolution: "contracts.ts@workspace:."
   dependencies:
     inversify: ^7.5.1
-    support.ts: "github:qtvhao/Support.ts"
   languageName: unknown
   linkType: soft
 
@@ -73,14 +72,5 @@ __metadata:
   peerDependencies:
     reflect-metadata: ~0.2.2
   checksum: a4f6275d28c304600d1d4183e3b09c08cec4c804aed33ad4512e6fbfc239f4f67e065e9ca9278fd94f06d8fa71edafab117d619ef897167289df70231041307c
-  languageName: node
-  linkType: hard
-
-"support.ts@github:qtvhao/Support.ts":
-  version: 1.0.0
-  resolution: "support.ts@https://github.com/qtvhao/Support.ts.git#commit=82482f6a66e45350dd3c4b103439e1799b8b8724"
-  dependencies:
-    inversify: ^7.5.1
-  checksum: 67c041a235c0a49271db158c4d65f2b2953830cb6fd5ea9cad493240e6cc1679eb71e651b11428f859172ac4428488ac02d59463304de42d0909494c18b1128b
   languageName: node
   linkType: hard
