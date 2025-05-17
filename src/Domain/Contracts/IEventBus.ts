@@ -3,5 +3,5 @@ import { IDomainEvent } from "./IDomainEvent";
 
 export interface IEventBus {
   publish(event: IDomainEvent): void;
-  registerHandler(handler: IEventHandler<IDomainEvent>): void;
+  subscribe<T extends IDomainEvent>(eventName: string, handler: IEventHandler<T>): void;
 }
