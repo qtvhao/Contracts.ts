@@ -7,7 +7,7 @@ import {
     OptionalGetOptions,
     ServiceIdentifier,
 } from "inversify";
-import { ServiceProvider } from "support.ts";
+import { IServiceProvider } from "../../Infrastructure/Bootstrap/IServiceProvider";
 
 export interface Application {
     bind<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T>;
@@ -60,9 +60,9 @@ export interface Application {
     hasDebugModeEnabled(): boolean;
 
     // Service Provider lifecycle
-    register(provider: ServiceProvider): void;
+    register(provider: IServiceProvider): void;
     boot(): Promise<void>;
-    resolveProvider<T>(provider: ServiceProvider): T;
+    resolveProvider<T>(provider: IServiceProvider): T;
 
     // Localization
     getLocale(): string;
