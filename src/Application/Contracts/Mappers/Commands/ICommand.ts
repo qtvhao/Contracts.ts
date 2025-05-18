@@ -1,8 +1,19 @@
 // Contracts.ts/src/Application/Contracts/Mappers/Commands/ICommand.ts
 
 export interface ICommandMetadata {
+    /**
+     * A unique identifier used to trace the command across services and logs.
+     */
     correlationId: string;
+
+    /**
+     * Identifies the user or system that issued the command.
+     */
     issuedBy: string;
+
+    /**
+     * Indicates the tenant context in multi-tenant systems.
+     */
     tenantId: string;
 }
 
