@@ -8,7 +8,14 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@Domain/*": ["./src/Domain/*"],
+      "@Application/*": ["./src/Application/*"],
+      "@Infrastructure/*": ["./src/Infrastructure/*"],
+      "@Presentation/*": ["./src/Presentation/*"],
+      "@Helpers/*": ["./src/Helpers/*"]
+    }
   },
   "include": ["src"]
 }
