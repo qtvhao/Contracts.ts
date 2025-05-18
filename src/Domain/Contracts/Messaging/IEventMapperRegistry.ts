@@ -1,10 +1,15 @@
-// src/Domain/Contracts/Messaging/IEventMapperRegistry.ts
-import { IEventMapper } from "@Application/Contracts/Mappers/IEventMapper";
-import { IDomainEvent } from "@Domain/Contracts/IDomainEvent";
+// Contracts.ts/src/Domain/Contracts/Messaging/IEventMapperRegistry.ts
+/**
+ * Base interface for a domain event.
+ */
 
-export type EventCtor<T extends IDomainEvent> = new (...args: any[]) => T;
+import { IEventMapper } from "../../../Application/Contracts/Mappers/IEventMapper";
+import { IDomainEvent } from "../IDomainEvent";
 
+/**
+ * Registry for managing event mappers by event name.
+ */
 export interface IEventMapperRegistry {
-  get<T extends IDomainEvent>(ctor: EventCtor<T>): IEventMapper<any, T> | undefined;
-  set<T extends IDomainEvent, U>(ctor: EventCtor<T>, mapper: IEventMapper<U, T>): void;
+  get(eventName: string): IEventMapper<any, any> | undefined;
+  set<T extends IDomainEvent, U>(eventName: string, mapper: IEventMapper<U, T>): void;
 }

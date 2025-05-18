@@ -7,7 +7,7 @@ import { EventConstructor } from "./Domain/Contracts/IEventBus";
 import { IConsumer } from "./Domain/Contracts/Messaging/IConsumer";
 import { IProducer } from "./Domain/Contracts/Messaging/IProducer";
 import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
-import { IEventMapperRegistry } from "@Domain/Contracts/Messaging/IEventMapperRegistry";
+import { IEventMapperRegistry } from "./Domain/Contracts/Messaging/IEventMapperRegistry";
 
 export {
     Application,
