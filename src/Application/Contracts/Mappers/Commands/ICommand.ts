@@ -1,4 +1,5 @@
 // Contracts.ts/src/Application/Contracts/Mappers/Commands/ICommand.ts
+type CommandType = `${string}.${string}.${string}`; // e.g., 'order.payment.capture'
 
 export interface ICommandMetadata {
     /**
@@ -23,7 +24,7 @@ export interface ICommand {
      * and logging across Command Buses and distributed service boundaries (SOA).
      * For e.g., 'domain.context.action', 'order.place'
      */
-    readonly type: string;
-    readonly metadata?: ICommandMetadata;
+    readonly type: CommandType;
+    readonly metadata: ICommandMetadata;
 }
 
