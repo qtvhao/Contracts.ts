@@ -2,5 +2,12 @@ import { IEventBus } from "./IEventBus";
 import { IEventMapperRegistry } from "./IEventMapperRegistry";
 import { IEventPublisher } from "./IEventPublisher";
 import { IEventSubscriber } from "./IEventSubscriber";
+import { EachMessagePayload } from "./EachMessagePayload";
 
-export { IEventBus, IEventMapperRegistry, IEventPublisher, IEventSubscriber };
+export {
+    EachMessagePayload,
+    IEventBus,
+    IEventMapperRegistry,
+    IEventPublisher,
+    IEventSubscriber,
+};

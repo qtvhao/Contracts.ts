@@ -3,6 +3,7 @@ import { IDomainEvent } from "./IDomainEvent";
 import { EventConstructor } from "./EventBus/IEventBus";
 import { IProducerConsumerEventBus } from "./IProducerConsumerEventBus";
 import {
+    EachMessagePayload,
     IEventBus,
     IEventMapperRegistry,
     IEventPublisher,
@@ -11,6 +12,7 @@ import {
 
 export {
     Application,
+    EachMessagePayload,
     EventConstructor,
     IDomainEvent,
     IEventBus,

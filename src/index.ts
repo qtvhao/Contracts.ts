@@ -7,6 +7,7 @@ import {
     IEventPublisher,
     IEventSubscriber,
     IProducerConsumerEventBus,
+    EachMessagePayload,
 } from "./Domain/Contracts";
 import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
@@ -33,6 +34,7 @@ export {
     IEventSubscriber,
     IInitializable,
     IProducer,
+    EachMessagePayload,
     IProducerConsumerEventBus,
     IServiceProvider,
 };
