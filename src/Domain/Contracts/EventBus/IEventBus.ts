@@ -7,6 +7,10 @@ export type EventConstructor<T extends IDomainEvent> = new (
   ...args: any[]
 ) => T;
 
+/**
+ * Note: IEventBus is exclusively for domain events.
+ * For command dispatching, use ICommandBus to preserve CQRS boundaries.
+ */
 export interface IEventBus
   extends
     IEventPublisher,
