@@ -1,5 +1,6 @@
 import {
     Application,
+    EachMessagePayload,
     EventConstructor,
     IDomainEvent,
     IEventBus,
@@ -7,11 +8,14 @@ import {
     IEventPublisher,
     IEventSubscriber,
     IProducerConsumerEventBus,
-    EachMessagePayload,
 } from "./Domain/Contracts";
 import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
-import { IConsumer, IProducer } from "./Domain/Contracts/Messaging";
+import {
+    IConsumer,
+    IMessageBroker,
+    IProducer,
+} from "./Domain/Contracts/Messaging";
 import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
@@ -20,6 +24,7 @@ import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 
 export {
     Application,
+    EachMessagePayload,
     EventConstructor,
     ICommand,
     ICommandHandler,
@@ -33,8 +38,8 @@ export {
     IEventPublisher,
     IEventSubscriber,
     IInitializable,
+    IMessageBroker,
     IProducer,
-    EachMessagePayload,
     IProducerConsumerEventBus,
     IServiceProvider,
 };
