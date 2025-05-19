@@ -8,6 +8,7 @@ import {
     IEventMapperRegistry,
     IEventPublisher,
     IEventSubscriber,
+    Message,
 } from "./EventBus/";
 
 export {
@@ -20,4 +21,5 @@ export {
     IEventPublisher,
     IEventSubscriber,
     IProducerConsumerEventBus,
+    Message,
 };
