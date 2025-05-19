@@ -1,3 +1,7 @@
+import { EachMessagePayload } from "../EventBus";
+
 export interface IConsumer {
-    subscribe(topic: string, onMessage: (message: string) => Promise<void>): void;
+  run(config: {
+    eachMessage: (payload: EachMessagePayload) => Promise<void>;
+  }): Promise<void>;
 }
