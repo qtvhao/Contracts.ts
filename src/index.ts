@@ -15,6 +15,7 @@ import {
     IConsumer,
     IMessageBroker,
     IProducer,
+    MessageHandler,
 } from "./Domain/Contracts/Messaging";
 import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
@@ -42,4 +43,5 @@ export {
     IProducer,
     IProducerConsumerEventBus,
     IServiceProvider,
+    MessageHandler,
 };
