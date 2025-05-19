@@ -3,14 +3,13 @@ import {
     EventConstructor,
     IDomainEvent,
     IEventBus,
+    IEventMapperRegistry,
+    IEventPublisher,
+    IEventSubscriber,
 } from "./Domain/Contracts";
 import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
-import {
-    IConsumer,
-    IEventMapperRegistry,
-    IProducer,
-} from "./Domain/Contracts/Messaging";
+import { IConsumer, IProducer } from "./Domain/Contracts/Messaging";
 import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
@@ -28,6 +27,8 @@ export {
     IEventHandler,
     IEventMapper,
     IEventMapperRegistry,
+    IEventPublisher,
+    IEventSubscriber,
     IProducer,
     IServiceProvider,
 };
