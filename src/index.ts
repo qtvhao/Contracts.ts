@@ -14,6 +14,7 @@ import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
 import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandHandler";
+import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 
 export {
     Application,
@@ -29,6 +30,7 @@ export {
     IEventMapperRegistry,
     IEventPublisher,
     IEventSubscriber,
+    IInitializable,
     IProducer,
     IServiceProvider,
 };
