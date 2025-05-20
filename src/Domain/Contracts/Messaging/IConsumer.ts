@@ -8,19 +8,11 @@ export interface IConsumer {
    */
   subscribe<T>(
     topic: string,
-    handler: (message: T) => Promise<void>,
+    handler: MessageHandler,
   ): Promise<void>;
 
   /**
    * Unsubscribes from the given topic.
    */
   unsubscribe(topic: string): Promise<void>;
-
-  /**
-   * Starts the consumer to process messages using the provided configuration.
-   * The `eachMessage` handler will be invoked for every message received.
-   */
-  run(config: {
-    eachMessage: MessageHandler;
-  }): Promise<void>;
 }
