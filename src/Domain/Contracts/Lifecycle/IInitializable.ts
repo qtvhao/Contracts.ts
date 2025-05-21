@@ -1,4 +1,4 @@
 export interface IInitializable {
-  setup(): void;
+  setup(): Promise<void>;
   start(): Promise<void>;
 }
