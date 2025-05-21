@@ -1,5 +1,5 @@
 import { IEventHandler } from "../../../Application/Handlers/Events/IEventHandler";
-import { IDomainEvent } from "../IDomainEvent";
+import { EventConstructor, IDomainEvent } from "../IDomainEvent";
 
 export interface IEventSubscriber {
   subscribe<T extends IDomainEvent>(

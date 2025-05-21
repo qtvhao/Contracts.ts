@@ -1,4 +1,3 @@
-import { IDomainEvent } from "../IDomainEvent";
 import { IEventPublisher } from "./IEventPublisher";
 import { IEventSubscriber } from "./IEventSubscriber";
 import { IInitializable } from "../Lifecycle/IInitializable";
