@@ -1,3 +1,3 @@
 export interface IProducer {
-    send(topic: string, message: string): Promise<void>;
+    produce(topic: string, message: Buffer): Promise<void>;
 }
