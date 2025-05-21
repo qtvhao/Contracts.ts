@@ -1,3 +1,7 @@
+export type EventConstructor<T extends IDomainEvent> = new (
+  ...args: any[]
+) => T;
+
 export interface IDomainEvent {
   readonly occurredOn: Date;
   readonly aggregateId: string;

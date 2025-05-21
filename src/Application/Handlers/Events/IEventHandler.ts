@@ -1,6 +1,6 @@
 // src/Application/Handlers/Events/IEventHandler.ts
 
-import { IDomainEvent } from "../../../Domain/Contracts/IDomainEvent";
+import { EventConstructor, IDomainEvent } from "../../../Domain/Contracts/IDomainEvent";
 
 export interface IEventHandler<T extends IDomainEvent = IDomainEvent> {
   /**
@@ -12,5 +12,5 @@ export interface IEventHandler<T extends IDomainEvent = IDomainEvent> {
   /**
    * Returns the event classes this handler is responsible for.
    */
-  supports(): Array<new (...args: any[]) => T>;
+  supports(): Array<EventConstructor<T>>;
 }

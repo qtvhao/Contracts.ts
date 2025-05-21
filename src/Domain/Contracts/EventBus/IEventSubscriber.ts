@@ -3,7 +3,7 @@ import { IDomainEvent } from "../IDomainEvent";
 
 export interface IEventSubscriber {
   subscribe<T extends IDomainEvent>(
-    eventCtor: new (...args: any[]) => T,
+    eventCtor: EventConstructor<T>,
     handler: IEventHandler<T>
   ): void;
 }
