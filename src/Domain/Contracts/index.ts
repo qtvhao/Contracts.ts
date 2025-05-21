@@ -1,6 +1,5 @@
 import { Application } from "./Application";
-import { IDomainEvent } from "./IDomainEvent";
-import { EventConstructor } from "./EventBus/IEventBus";
+import { IDomainEvent, EventConstructor } from "./IDomainEvent";
 import { IProducerConsumerEventBus } from "./IProducerConsumerEventBus";
 import {
     EachMessagePayload,
