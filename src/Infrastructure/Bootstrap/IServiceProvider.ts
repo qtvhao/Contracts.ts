@@ -1,9 +1,16 @@
 // IServiceProvider.ts
+import { Application } from "../../Domain/Contracts";
+
 // This interface defines the contract for a service provider in a dependency injection system.
 // A service provider is responsible for registering services and managing their lifecycle,
 // including boot-time hooks and conditional loading mechanisms.
-
 export interface IServiceProvider {
+  /**
+   * Reference to the application instance.
+   * Used to access the service container and application state.
+   */
+  app: Application;
+
   /**
    * Register services or bindings into the application's service container.
    * This method is called during the registration phase.
