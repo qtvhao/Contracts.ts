@@ -54,10 +54,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^22.15.21":
+  version: 22.15.21
+  resolution: "@types/node@npm:22.15.21"
+  dependencies:
+    undici-types: ~6.21.0
+  checksum: 989f1ce3a99916a7298ae885210385fbcb339b07f8ef420b015d69dd68863aca68aeae07833736b300720d9394b8e1875600ce74166c24957d9907d29de0b788
+  languageName: node
+  linkType: hard
+
 "contracts.ts@workspace:.":
   version: 0.0.0-use.local
   resolution: "contracts.ts@workspace:."
   dependencies:
+    "@types/node": ^22.15.21
     inversify: ^7.5.1
   languageName: unknown
   linkType: soft
@@ -72,5 +82,12 @@ __metadata:
   peerDependencies:
     reflect-metadata: ~0.2.2
   checksum: a4f6275d28c304600d1d4183e3b09c08cec4c804aed33ad4512e6fbfc239f4f67e065e9ca9278fd94f06d8fa71edafab117d619ef897167289df70231041307c
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
   languageName: node
   linkType: hard
