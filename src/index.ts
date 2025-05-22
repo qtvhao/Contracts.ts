@@ -11,7 +11,7 @@ import {
     Message,
 } from "./Domain/Contracts";
 import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
-import TYPES from "./Infrastructure/Bootstrap/TYPES";
+import TYPES from "./Infrastructure/Bootstrap/types";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
 import { IMessageBrokerFactory } from "./Infrastructure/BrokerFactory/IMessageBrokerFactory";
 import {
