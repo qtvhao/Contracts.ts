@@ -1,5 +1,5 @@
-import { IMessageBroker } from "../../Domain/Contracts/Messaging";
+import { IMessageBroker, BrokerType } from "../../Domain/Contracts/Messaging";
 
 export interface IMessageBrokerFactory {
-  create(driver: string): IMessageBroker;
+  create(driver: BrokerType): IMessageBroker;
 }
