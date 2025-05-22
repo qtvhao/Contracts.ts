@@ -12,6 +12,7 @@ import {
 } from "./Domain/Contracts";
 import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
+import { IMessageBrokerFactory } from "./Infrastructure/BrokerFactory/IMessageBrokerFactory";
 import {
     IConsumer,
     IMessageBroker,
@@ -41,6 +42,7 @@ export {
     IEventSubscriber,
     IInitializable,
     IMessageBroker,
+    IMessageBrokerFactory,
     IProducer,
     IProducerConsumerEventBus,
     IServiceProvider,
