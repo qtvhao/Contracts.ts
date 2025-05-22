@@ -14,12 +14,13 @@ import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
 import { IMessageBrokerFactory } from "./Infrastructure/BrokerFactory/IMessageBrokerFactory";
 import {
+    BrokerType,
     IConsumer,
     IMessageBroker,
     IProducer,
     MessageHandler,
 } from "./Domain/Contracts/Messaging";
-import TYPES from './Infrastructure/Bootstrap/types'
+import TYPES from "./Infrastructure/Bootstrap/types";
 import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
@@ -28,6 +29,7 @@ import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 
 export {
     Application,
+    BrokerType,
     EachMessagePayload,
     EventConstructor,
     ICommand,

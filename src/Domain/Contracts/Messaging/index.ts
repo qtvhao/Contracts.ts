@@ -1,5 +1,5 @@
 import { IConsumer, MessageHandler } from "./IConsumer";
 import { IProducer } from "./IProducer";
-import { IMessageBroker } from "./IMessageBroker";
+import { BrokerType, IMessageBroker } from "./IMessageBroker";
 
-export { IConsumer, IMessageBroker, IProducer, MessageHandler };
+export { BrokerType, IConsumer, IMessageBroker, IProducer, MessageHandler };
