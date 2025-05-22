@@ -11,7 +11,6 @@ import {
     Message,
 } from "./Domain/Contracts";
 import { IEventHandler } from "./Application/Handlers/Events/IEventHandler";
-import TYPES from "./Infrastructure/Bootstrap/types";
 import { IServiceProvider } from "./Infrastructure/Bootstrap/IServiceProvider";
 import { IMessageBrokerFactory } from "./Infrastructure/BrokerFactory/IMessageBrokerFactory";
 import {
@@ -20,6 +19,7 @@ import {
     IProducer,
     MessageHandler,
 } from "./Domain/Contracts/Messaging";
+import TYPES from './Infrastructure/Bootstrap/types'
 import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
