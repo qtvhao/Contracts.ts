@@ -17,12 +17,13 @@ import { IMessageBrokerFactory } from "./Infrastructure/BrokerFactory/IMessageBr
 import {
     BrokerType,
     IConsumer,
+    IEventTopicMapper,
     IMessageBroker,
     IProducer,
     MessageHandler,
 } from "./Domain/Contracts/Messaging";
 import TYPES from "./Infrastructure/Bootstrap/types";
-import { IEventMapper } from "./Application/Contracts/Mappers/IEventMapper";
+import { IDomainEventMapper } from "./Application/Contracts/Mappers/IDomainEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
 import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandHandler";
@@ -41,10 +42,11 @@ export {
     IDomainEvent,
     IEventBus,
     IEventHandler,
-    IEventMapper,
+    IDomainEventMapper,
     IEventMapperRegistry,
     IEventPublisher,
     IEventSubscriber,
+    IEventTopicMapper,
     IInitializable,
     IMessageBroker,
     IMessageBrokerFactory,
