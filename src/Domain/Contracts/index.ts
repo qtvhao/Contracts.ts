@@ -5,7 +5,7 @@ import { IProducerConsumerEventBus } from "./IProducerConsumerEventBus";
 import {
     EachMessagePayload,
     IEventBus,
-    IEventMapperRegistry,
+    IDomainEventMapperRegistry,
     IEventPublisher,
     IEventSubscriber,
     Message,
@@ -18,7 +18,7 @@ export {
     IConfigurationService,
     IDomainEvent,
     IEventBus,
-    IEventMapperRegistry,
+    IDomainEventMapperRegistry,
     IEventPublisher,
     IEventSubscriber,
     IProducerConsumerEventBus,
