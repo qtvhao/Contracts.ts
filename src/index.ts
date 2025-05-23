@@ -22,7 +22,7 @@ import {
     IProducer,
     MessageHandler,
 } from "./Domain/Contracts/Messaging";
-import TYPES from "./Infrastructure/Bootstrap/types";
+import TYPES from "./Infrastructure/Bootstrap/types.0";
 import { IDomainEventMapper } from "./Application/Contracts/Mappers/IDomainEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
