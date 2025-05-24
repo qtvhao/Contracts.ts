@@ -2,7 +2,9 @@ export type EventConstructor<T extends IDomainEvent> = new (
   ...args: any[]
 ) => T;
 
-export interface IDomainEvent {
+type DomainEventBrand = { __brand: 'DomainEvent' };
+
+export interface IDomainEvent extends DomainEventBrand {
   readonly occurredOn: Date;
   readonly aggregateId: string;
 
