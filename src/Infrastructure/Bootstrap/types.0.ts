@@ -7,6 +7,7 @@ const TYPES = {
   EventTopicMapper: Symbol.for("EventTopicMapper"),
   EventHandlerResolver: Symbol.for("EventHandlerResolver"),
   EventBusFactory: Symbol.for("EventBusFactory"),
+  MessageBrokerFactoryMap: Symbol.for("MessageBrokerFactoryMap"),
 };
 
 export default TYPES;
