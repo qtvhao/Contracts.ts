@@ -5,7 +5,7 @@ export interface Message<K = any, V = any> {
   key?: K;
 
   /**
-   * Serialized domain event payload to be deserialized via IEventMapper.
+   * Serialized domain event payload to be deserialized via IDomainEventMapper.
    */
   value: V;
 
