@@ -6,6 +6,7 @@ const TYPES = {
   ConfigurationService: Symbol.for("ConfigurationService"),
   EventTopicMapper: Symbol.for("EventTopicMapper"),
   EventHandlerResolver: Symbol.for("EventHandlerResolver"),
+  EventBusFactory: Symbol.for("EventBusFactory"),
 };
 
 export default TYPES;
