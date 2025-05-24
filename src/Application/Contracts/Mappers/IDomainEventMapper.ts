@@ -1,7 +1,8 @@
 import { IDomainEvent } from "../../../Domain/Contracts/IDomainEvent";
+import { Message } from "../../../Domain/Contracts/EventBus/EachMessagePayload"
 
-export interface IDomainEventMapper<DTO, DomainEvent extends IDomainEvent> {
-    toDomain(dto: DTO): DomainEvent;
-    toDTO(event: DomainEvent): DTO;
-    isDomainEvent(event: IDomainEvent): event is DomainEvent;
+export interface IDomainEventMapper<TMessage extends Message, TDomainEvent extends IDomainEvent> {
+    toDomain(dto: TMessage): TDomainEvent;
+    toDTO(event: TDomainEvent): TMessage;
+    isDomainEvent(event: IDomainEvent): event is TDomainEvent;
 }
