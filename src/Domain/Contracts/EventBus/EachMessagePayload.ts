@@ -1,18 +1,18 @@
-export interface Message {
+export interface Message<K = any, V = any> {
   /**
    * Partitioning key, often an entity ID (e.g., Order ID).
    */
-  key: Buffer | null;
+  key?: K;
 
   /**
    * Serialized domain event payload to be deserialized via IEventMapper.
    */
-  value: Buffer | null;
+  value: V;
 
   /**
    * Optional metadata (e.g., correlation ID, version, tenant).
    */
-  headers?: Record<string, Buffer | string | undefined>;
+  headers?: Record<string, Buffer | string>; // Optional headers
 }
 
 export interface EachMessagePayload {
