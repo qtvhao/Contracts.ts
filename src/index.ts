@@ -21,6 +21,7 @@ import {
     IEventBusFactory,
     IEventTopicMapper,
     IMessageBroker,
+    IMessageBrokerFactoryMap,
     IProducer,
     MessageHandler,
 } from "./Domain/Contracts/Messaging";
@@ -54,6 +55,7 @@ export {
     IInitializable,
     IMessageBroker,
     IMessageBrokerFactory,
+    IMessageBrokerFactoryMap,
     IProducer,
     IProducerConsumerEventBus,
     IServiceProvider,
