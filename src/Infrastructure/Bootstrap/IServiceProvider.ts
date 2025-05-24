@@ -18,6 +18,12 @@ export interface IServiceProvider {
   register(): void;
 
   /**
+   * Optional boot method called during the boot phase after 'booting' callbacks and
+   * before 'booted' callbacks. Useful for initializing services.
+   */
+  boot?(): void;
+
+  /**
    * Register a callback to be executed before the boot process starts.
    * Useful for setting up prerequisites for services.
    */
