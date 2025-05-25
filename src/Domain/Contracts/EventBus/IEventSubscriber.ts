@@ -5,5 +5,5 @@ export interface IEventSubscriber {
   subscribe<T extends IDomainEvent>(
     eventCtor: EventConstructor<T>,
     handler: IEventHandler<T>
-  ): void;
+  ): Promise<void>;
 }
