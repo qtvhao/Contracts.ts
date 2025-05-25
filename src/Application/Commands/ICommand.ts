@@ -1,4 +1,6 @@
 export interface ICommand {
-  readonly commandType: string;
-  readonly occurredOn: Date;
+    readonly commandType: string;
+    readonly commandId: string; // UUID to ensure idempotency
+    readonly aggregateId: string; // Target AR identifier
+    readonly occurredOn: Date; // Timestamp of issuance
 }
