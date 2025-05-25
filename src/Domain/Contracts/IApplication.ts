@@ -1,5 +1,3 @@
-// src/Domain/Contracts/Application.ts
-
 import {
     BindingIdentifier,
     BindToFluentSyntax,
@@ -9,7 +7,7 @@ import {
 } from "inversify";
 import { IServiceProvider } from "../../Infrastructure/Bootstrap/IServiceProvider";
 
-export interface Application {
+export interface IApplication {
     bind<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T>;
     get<T>(
         serviceIdentifier: ServiceIdentifier<T>,

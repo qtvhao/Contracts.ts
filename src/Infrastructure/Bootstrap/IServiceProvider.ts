@@ -1,5 +1,4 @@
-// IServiceProvider.ts
-import { Application } from "../../Domain/Contracts";
+import { IApplication } from "../../Domain/Contracts";
 
 // This interface defines the contract for a service provider in a dependency injection system.
 // A service provider is responsible for registering services and managing their lifecycle,
@@ -21,7 +20,7 @@ export interface IServiceProvider {
    * Optional boot method called during the boot phase after 'booting' callbacks and
    * before 'booted' callbacks. Useful for initializing services.
    */
-  boot?(): void;
+  boot?(): Promise<void>;
 
   /**
    * Register a callback to be executed before the boot process starts.
@@ -39,13 +38,13 @@ export interface IServiceProvider {
    * Call all registered 'booting' callbacks.
    * Typically invoked internally during the boot phase.
    */
-  callBootingCallbacks(): void;
+  callBootingCallbacks(): Promise<void>;
 
   /**
    * Call all registered 'booted' callbacks.
    * Typically invoked internally after the boot phase.
    */
-  callBootedCallbacks(): void;
+  callBootedCallbacks(): Promise<void>;
 
   /** Hook: register logic to run on shutdown (cleanup, termination). */
   onShutdown(callback: () => void): void;

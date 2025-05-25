@@ -1,5 +1,5 @@
 import {
-    Application,
+    IApplication,
     EachMessagePayload,
     EventConstructor,
     IConfigurationService,
@@ -33,7 +33,7 @@ import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandH
 import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 
 export {
-    Application,
+    IApplication,
     BrokerType,
     EachMessagePayload,
     EventConstructor,
