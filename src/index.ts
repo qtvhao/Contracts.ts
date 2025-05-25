@@ -33,6 +33,7 @@ import { IQueryBus } from "./Application/Contracts/IQueryBus";
 import { IDomainEventMapper } from "./Application/Contracts/Mappers/IDomainEventMapper";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
 import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandHandler";
+import { IQueryHandler } from "./Application/Handlers/CQRS/Contracts/IQueryHandler";
 import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 
 export {
@@ -64,6 +65,7 @@ export {
     IProducerConsumerEventBus,
     IQuery,
     IQueryBus,
+    IQueryHandler,
     IServiceProvider,
     Message,
     MessageHandler,
