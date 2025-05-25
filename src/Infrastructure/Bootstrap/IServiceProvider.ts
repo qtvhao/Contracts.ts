@@ -47,6 +47,12 @@ export interface IServiceProvider {
    */
   callBootedCallbacks(): void;
 
+  /** Hook: register logic to run on shutdown (cleanup, termination). */
+  onShutdown(callback: () => void): void;
+
+  /** Trigger all shutdown callbacks. */
+  callShutdownCallbacks(): void;
+
   /**
    * Declare the list of services or bindings provided by this provider.
    * Used for deferred service loading.
