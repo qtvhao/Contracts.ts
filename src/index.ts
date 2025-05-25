@@ -27,9 +27,10 @@ import {
 } from "./Domain/Contracts/Messaging";
 import TYPES from "./Infrastructure/Bootstrap/types.0";
 import { ICommandBus } from "./Application/Contracts/ICommandBus";
+import { ICommand } from "./Application/Commands/ICommand";
+import { IQuery } from "./Application/Commands/IQuery";
 import { IQueryBus } from "./Application/Contracts/IQueryBus";
 import { IDomainEventMapper } from "./Application/Contracts/Mappers/IDomainEventMapper";
-import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
 import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandHandler";
 import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
@@ -61,6 +62,7 @@ export {
     IMessageBrokerFactoryMap,
     IProducer,
     IProducerConsumerEventBus,
+    IQuery,
     IQueryBus,
     IServiceProvider,
     Message,
