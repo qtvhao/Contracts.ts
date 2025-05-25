@@ -1,3 +1,4 @@
 export interface ICommand {
-    readonly type: string;
+  readonly commandType: string;
+  readonly occurredOn: Date;
 }
