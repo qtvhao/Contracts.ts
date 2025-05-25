@@ -8,7 +8,7 @@ export interface IServiceProvider {
    * Reference to the application instance.
    * Used to access the service container and application state.
    */
-  app: Application;
+  app: IApplication;
 
   /**
    * Register services or bindings into the application's service container.
