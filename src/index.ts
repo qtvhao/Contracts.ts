@@ -1,7 +1,7 @@
 import {
-    IApplication,
     EachMessagePayload,
     EventConstructor,
+    IApplication,
     IConfigurationService,
     IDomainEvent,
     IDomainEventMapperRegistry,
@@ -26,6 +26,8 @@ import {
     MessageHandler,
 } from "./Domain/Contracts/Messaging";
 import TYPES from "./Infrastructure/Bootstrap/types.0";
+import { ICommandBus } from "./Application/Contracts/ICommandBus";
+import { IQueryBus } from "./Application/Contracts/IQueryBus";
 import { IDomainEventMapper } from "./Application/Contracts/Mappers/IDomainEventMapper";
 import { ICommand } from "./Application/Contracts/Mappers/Commands/ICommand";
 import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
@@ -33,11 +35,12 @@ import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandH
 import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 
 export {
-    IApplication,
     BrokerType,
     EachMessagePayload,
     EventConstructor,
+    IApplication,
     ICommand,
+    ICommandBus,
     ICommandHandler,
     ICommandHandlerResolver,
     IConfigurationService,
@@ -58,6 +61,7 @@ export {
     IMessageBrokerFactoryMap,
     IProducer,
     IProducerConsumerEventBus,
+    IQueryBus,
     IServiceProvider,
     Message,
     MessageHandler,
