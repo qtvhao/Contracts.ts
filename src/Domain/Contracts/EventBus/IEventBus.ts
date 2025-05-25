@@ -7,7 +7,6 @@ import { IInitializable } from "../Lifecycle/IInitializable";
  * For command dispatching, use ICommandBus to preserve CQRS boundaries.
  */
 export interface IEventBus
-  extends
-    IEventPublisher,
-    IEventSubscriber,
-    IInitializable {}
+  extends IEventPublisher, IEventSubscriber, IInitializable {
+  shutdown(): Promise<void>;
+}
