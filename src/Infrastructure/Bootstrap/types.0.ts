@@ -1,5 +1,7 @@
 // types.ts
 const TYPES = {
+  CommandBus: Symbol.for("CommandBus"),
+  QueryBus: Symbol.for("QueryBus"),
   MessageBrokerFactory: Symbol.for("MessageBrokerFactory"),
   DomainEventMapperRegistry: Symbol.for("DomainEventMapperRegistry"),
   EventBus: Symbol.for("EventBus"),
