@@ -3,6 +3,6 @@ import { IQueryHandler } from "../Handlers/CQRS/Contracts/IQueryHandler";
 
 export interface IQueryHandlerResolver {
   resolve<TQuery extends IQuery, TResult extends object | void>(
-    command: TQuery
+    query: TQuery
   ): IQueryHandler<TQuery, TResult>;
 }
