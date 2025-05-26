@@ -1,3 +1,7 @@
+export type CommandConstructor<T extends ICommand> = new (
+  ...args: any[]
+) => T;
+
 export interface ICommand {
     readonly commandType: string;
     readonly commandId: string; // UUID to ensure idempotency
