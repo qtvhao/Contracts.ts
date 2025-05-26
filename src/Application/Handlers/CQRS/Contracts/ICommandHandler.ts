@@ -2,7 +2,7 @@ import { IDomainEvent } from "../../../../Domain/Contracts/IDomainEvent";
 import { ICommand } from "../../../Commands/ICommand";
 
 export interface ICommandHandler<TCommand extends ICommand, TResult extends object | void = void> {
-  execute(command: TCommand): Promise<TResult>;
+  handle(command: TCommand): Promise<TResult>;
 
   /**
    * Optional hook to expose domain events generated during execution,
