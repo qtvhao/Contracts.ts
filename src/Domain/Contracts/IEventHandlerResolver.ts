@@ -1,5 +1,3 @@
-
-
 import { IEventHandler } from '../../Application/Handlers/Events/IEventHandler';
 import { EventConstructor, IDomainEvent } from './IDomainEvent';
 
