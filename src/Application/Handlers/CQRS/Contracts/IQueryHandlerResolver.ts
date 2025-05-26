@@ -1,6 +1,6 @@
-import { IQuery, QueryConstructor } from "../Commands/IQuery";
-import { IQueryResult } from "../DTOs/IQueryResult";
-import { IQueryHandler } from "../Handlers/CQRS/Contracts/IQueryHandler";
+import { IQuery, QueryConstructor } from "../../../Commands/IQuery";
+import { IQueryResult } from "../../../DTOs/IQueryResult";
+import { IQueryHandler } from "./IQueryHandler";
 
 export interface IQueryHandlerResolver {
   /**

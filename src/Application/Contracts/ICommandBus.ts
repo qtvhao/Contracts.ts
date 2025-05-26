@@ -1,5 +1,5 @@
 import { ICommand } from "../Commands/ICommand";
-import { ICommandHandlerResolver } from "./ICommandHandlerResolver";
+import { ICommandHandlerResolver } from "../Handlers/CQRS/Contracts/ICommandHandlerResolver";
 
 export interface ICommandBus {
   readonly handlerResolver: ICommandHandlerResolver;

@@ -31,8 +31,8 @@ import { ICommand } from "./Application/Commands/ICommand";
 import { IQuery } from "./Application/Commands/IQuery";
 import { IQueryBus } from "./Application/Contracts/IQueryBus";
 import { IDomainEventMapper } from "./Application/Contracts/Mappers/IDomainEventMapper";
-import { ICommandHandlerResolver } from "./Application/Contracts/ICommandHandlerResolver";
-import { IQueryHandlerResolver } from "./Application/Contracts/IQueryHandlerResolver";
+import { ICommandHandlerResolver } from "./Application/Handlers/CQRS/Contracts/ICommandHandlerResolver";
+import { IQueryHandlerResolver } from "./Application/Handlers/CQRS/Contracts/IQueryHandlerResolver";
 import { ICommandHandler } from "./Application/Handlers/CQRS/Contracts/ICommandHandler";
 import { IQueryHandler } from "./Application/Handlers/CQRS/Contracts/IQueryHandler";
 import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
@@ -40,7 +40,6 @@ import { IInitializable } from "./Domain/Contracts/Lifecycle/IInitializable";
 export {
     BrokerType,
     EachMessagePayload,
-    IQueryHandlerResolver,
     EventConstructor,
     IApplication,
     ICommand,
@@ -68,6 +67,7 @@ export {
     IQuery,
     IQueryBus,
     IQueryHandler,
+    IQueryHandlerResolver,
     IServiceProvider,
     Message,
     MessageHandler,
