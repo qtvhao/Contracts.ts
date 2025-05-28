@@ -50,7 +50,7 @@ export interface IServiceProvider {
   onShutdown(callback: () => void, toStart?: boolean): void;
 
   /** Trigger all shutdown callbacks. */
-  callShutdownCallbacks(): void;
+  callShutdownCallbacks(): Promise<void>;
 
   /**
    * Declare the list of services or bindings provided by this provider.
