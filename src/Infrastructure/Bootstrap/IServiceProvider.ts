@@ -57,4 +57,8 @@ export interface IServiceProvider {
    * Used for deferred service loading.
    */
   provides(): string[];
+
+  mapEventTopics(): Promise<void>;
+  registerEventMappers(): Promise<void>;
+  subscribeEventHandlers(): Promise<void>;
 }
