@@ -26,13 +26,13 @@ export interface IServiceProvider {
    * Register a callback to be executed before the boot process starts.
    * Useful for setting up prerequisites for services.
    */
-  booting(callback: () => void): void;
+  booting(callback: () => void, toStart?: boolean): void;
 
   /**
    * Register a callback to be executed after the boot process completes.
    * Useful for post-boot logic like event listeners or loggers.
    */
-  booted(callback: () => void): void;
+  booted(callback: () => void, toStart?: boolean): void;
 
   /**
    * Call all registered 'booting' callbacks.
@@ -47,7 +47,7 @@ export interface IServiceProvider {
   callBootedCallbacks(): Promise<void>;
 
   /** Hook: register logic to run on shutdown (cleanup, termination). */
-  onShutdown(callback: () => void): void;
+  onShutdown(callback: () => void, toStart?: boolean): void;
 
   /** Trigger all shutdown callbacks. */
   callShutdownCallbacks(): void;
